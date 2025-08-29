@@ -88,7 +88,7 @@ void leer_consola(t_log* logger)
 	leido = readline("> ");
 
 	// El resto, las vamos leyendo y logueando hasta recibir un string vacío
-	while(leido != ""){
+	while(leido[0] != '\0'){
 		log_info(logger, "Leido: %s", leido);
 		leido = readline("> ");
 	}
@@ -109,7 +109,7 @@ void paquete(int conexion)
 
 	leido = readline("> ");
 
-	while(leido != ""){
+	while(leido[0] != '\0'){
 		agregar_a_paquete( paquete, leido, strlen(leido)+1);
 		leido = readline("> ");
 	}
