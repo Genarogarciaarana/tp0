@@ -69,7 +69,7 @@ int main(void)
 t_log* iniciar_logger(void)
 {
 	t_log* nuevo_logger;
-	
+
 	return nuevo_logger;
 }
 
@@ -110,7 +110,6 @@ void paquete(int conexion)
 	leido = readline("> ");
 
 	while(leido != ""){
-		log_info(logger, "Leido: %s", leido);
 		agregar_a_paquete( paquete, leido, strlen(leido)+1);
 		leido = readline("> ");
 	}
